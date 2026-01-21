@@ -6,13 +6,16 @@ uvicorn app.main:app --port 8000
 # API Documentation
 http://127.0.0.1:8000/docs
 
+
 # Api Endpoint
 http://127.0.0.1:8000/mcp
+
 
 # Invoke Discovery Endpoint
 Invoke-RestMethod -Uri "http://127.0.0.1:8000/mcp" `
     -Method Post `
     -ContentType "application/json" -Body '{"verb": "discovery"}'
+
 
 # Invoke Tool 
 Invoke-RestMethod  -Uri "http://127.0.0.1:8000/mcp" `
